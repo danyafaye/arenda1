@@ -1,6 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
+.app {
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=App.css.map */

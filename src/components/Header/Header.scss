@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  height: 6.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: 1200px;
+  }
+  &__top-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    &-buttons{
+      display: flex;
+      float:right;
+      margin: auto 0 auto auto;
+    }
+    &-button{
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 16px;
+      font-family: inherit;
+      color:white;
+      cursor: pointer;
+      background-color: #0085B2;
+      border: none;
+      margin-left: 1rem;
+      transition: background-color .3s ease;
+      &:hover{
+        background-color: #007095;
+      }
+    }
+    &-title {
+      font-size: 2.75rem;
+      font-weight: 400;
+    }
+    &-navi {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 0 auto 1.125rem;
+      height: 10%;
+      padding: 0.5rem 0.25rem;
+      width: 15.25%;
+      background-color: rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      &-icon {
+        margin-right: 0.25rem;
+        color: rgba(0, 0, 0, 0.56);
+        * {
+          fill: rgba(0, 0, 0, 0.56);
+        }
+      }
+      &-text {
+        text-align: center;
+      }
+    }
+  }
+  &__bottom {
+    &-navi {
+      display: flex;
+      flex-direction: row;
+      &:not(:last-child){
+        margin-right: 0;
+      }
+    }
+    &-button{
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 1rem;
+      border: transparent;
+      background-color: transparent;
+      margin-right: 1rem;
+      cursor: pointer;
+      transition: color .2s ease;
+      &:hover{
+        color: #0085B2;
+      }
+    }
+  }
+}

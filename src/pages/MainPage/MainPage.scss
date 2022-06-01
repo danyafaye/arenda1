@@ -1,6 +1,6 @@
 .main{
-  margin: 0 auto;
-  width: 1200px;;
+  margin: 0 auto 2rem auto;
+  width: 1200px;
   flex: 1 1 auto;
   &__search{
     &-block{
@@ -163,6 +163,8 @@
     }
   }
   &__submit{
+    width: 10.5rem;
+    text-decoration: none;
     display: flex;
     position: relative;
     top: 41%;
@@ -178,6 +180,36 @@
     transition: background-color .3s ease;
     &:hover{
       background-color: #007095;
+    }
+  }
+  &__ad{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    background-color: #aebfc7;
+    width: 60%;
+    height: 200px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    &-text{
+      display: flex;
+      flex-direction: column;
+    }
+    &-title{
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+    &-subtext{
+      margin-left: 2rem;
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    &-picture{
+      z-index: 4;
+      height: 348px;
+      width: 358px;
     }
   }
 }

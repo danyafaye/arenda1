@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import './MainPage.scss'
 import block from 'bem-cn'
+import { Link } from 'react-router-dom'
 
 const MainPage: React.FC = () => {
   const b = block('main')
-  const [selected, setSelected] = useState('buy')
+  const [type, setType] = useState('buy')
   const [focused, setFocused] = useState(false)
+  const [priceFrom, setPriceFrom] = useState('')
+  const [priceTo, setPriceTo] = useState('')
+
   return (
     <main className={b()}>
       <div className={b('search-block')}>
@@ -13,13 +17,13 @@ const MainPage: React.FC = () => {
           <div className={b('search-title')}>Недвижимость в Санкт-Петербурге</div>
           <div className={b('search-buttons')}>
             <button
-              className={b('search-button', selected === 'buy' ? { selected: true } : { selected: false })}
-              onClick={() => setSelected('buy')}>
+              className={b('search-button', type === 'buy' ? { selected: true } : { selected: false })}
+              onClick={() => setType('buy')}>
               Купить
             </button>
             <button
-              className={b('search-button', selected === 'rent' ? { selected: true } : { selected: false })}
-              onClick={() => setSelected('rent')}>
+              className={b('search-button', type === 'rent' ? { selected: true } : { selected: false })}
+              onClick={() => setType('rent')}>
               Снять
             </button>
           </div>
@@ -33,12 +37,32 @@ const MainPage: React.FC = () => {
               <label className={b('search-label')}>4+</label>
             </div>
             <div className={b('search-price-inputs')}>
-              <input className={b('search-price-input')} type="text" placeholder="Цена от:" />
-              <input className={b('search-price-input')} type="text" placeholder="До:" />
+              <input
+                value={priceFrom}
+                onChange={e => setPriceFrom(e.target.value)}
+                className={b('search-price-input')}
+                type="text"
+                placeholder="Цена от:"
+              />
+              <input
+                value={priceTo}
+                onChange={e => setPriceTo(e.target.value)}
+                className={b('search-price-input')}
+                type="text"
+                placeholder="До:"
+              />
             </div>
             <input type="text" className={b('search-address')} placeholder="Укажите адрес" />
           </div>
-          <button className={b('submit')}>Показать объявления</button>
+          <Link className={b('submit')} to="/advertisement">
+            Показать объявления
+          </Link>
+        </div>
+      </div>
+      <div className={b('ad')}>
+        <div className={b('ad-text')}>
+          <span className={b('ad-title')}>Место для вашей рекламы</span>
+          <span className={b('ad-subtext')}>Мы зарезервировали его специально для Вас!</span>
         </div>
       </div>
     </main>

@@ -22,7 +22,7 @@
 }
 .header__top-content-button {
   padding: 0.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 6px;
   font-size: 16px;
   font-family: inherit;
   color: white;
@@ -35,9 +35,23 @@
 .header__top-content-button:hover {
   background-color: #007095;
 }
+.header__top-content-button_login {
+  background-color: transparent;
+  color: black;
+}
+.header__top-content-button_login:hover {
+  color: #0085B2;
+  background-color: transparent;
+}
 .header__top-content-title {
+  text-decoration: none;
   font-size: 2.75rem;
   font-weight: 400;
+  color: black;
+  transition: color 0.3s ease;
+}
+.header__top-content-title:hover {
+  color: #007095;
 }
 .header__top-content-navi {
   display: inline-flex;

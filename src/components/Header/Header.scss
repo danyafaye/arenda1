@@ -20,7 +20,7 @@
     }
     &-button{
       padding: 0.5rem 1rem;
-      border-radius: 15px;
+      border-radius: 6px;
       font-size: 16px;
       font-family: inherit;
       color:white;
@@ -32,10 +32,24 @@
       &:hover{
         background-color: #007095;
       }
+      &_login{
+        background-color: transparent;
+        color:black;
+        &:hover{
+          color: #0085B2;
+          background-color: transparent;
+        }
+      }
     }
     &-title {
+      text-decoration: none;
       font-size: 2.75rem;
       font-weight: 400;
+      color:black;
+      transition: color .3s ease;
+      &:hover{
+        color: #007095;
+      }
     }
     &-navi {
       display: inline-flex;

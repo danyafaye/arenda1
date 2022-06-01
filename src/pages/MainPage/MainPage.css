@@ -1,5 +1,5 @@
 .main {
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   width: 1200px;
   flex: 1 1 auto;
 }
@@ -157,6 +157,8 @@
   outline: 2px solid #0085B2;
 }
 .main__submit {
+  width: 10.5rem;
+  text-decoration: none;
   display: flex;
   position: relative;
   top: 41%;
@@ -173,6 +175,36 @@
 }
 .main__submit:hover {
   background-color: #007095;
+}
+.main__ad {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  background-color: #aebfc7;
+  width: 60%;
+  height: 200px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.main__ad-text {
+  display: flex;
+  flex-direction: column;
+}
+.main__ad-title {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.main__ad-subtext {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+.main__ad-picture {
+  z-index: 4;
+  height: 348px;
+  width: 358px;
 }
 
 /*# sourceMappingURL=MainPage.css.map */

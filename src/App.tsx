@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import block from 'bem-cn'
+import Advertisement from './pages/Advertisement/Advertisement'
 
 const App: React.FC<any> = () => {
   const b = block('app')
@@ -14,6 +15,7 @@ const App: React.FC<any> = () => {
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/advertisement" element={<Advertisement />} />
       </Routes>
       <Footer />
     </div>

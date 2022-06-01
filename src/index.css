@@ -1,11 +1,12 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   scroll-behavior: smooth;
   height: 100%;
 }
 
+/*# sourceMappingURL=index.css.map */

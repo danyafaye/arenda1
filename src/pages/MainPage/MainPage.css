@@ -2,6 +2,7 @@
   margin: 0 auto 2rem auto;
   width: 1200px;
   flex: 1 1 auto;
+  overflow: hidden;
 }
 .main__search-block {
   display: flex;
@@ -25,17 +26,18 @@
   z-index: 2;
 }
 .main__search-text {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   z-index: 3;
   width: 100%;
   height: 100%;
+  align-items: center;
 }
 .main__search-title {
-  position: relative;
-  top: 5rem;
-  left: 17rem;
+  margin-top: 6.5rem;
   text-align: center;
-  display: inline;
+  display: flex;
+  justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
   color: white;
@@ -45,12 +47,11 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  top: 10rem;
   background-color: white;
   border-radius: 4px;
   margin: 0 auto;
-  width: 800px;
-  height: 45px;
+  width: 65%;
+  height: 10%;
 }
 .main__search-input-left {
   cursor: pointer;
@@ -68,10 +69,11 @@
 }
 .main__search-buttons {
   display: flex;
-  position: relative;
+  flex-direction: row;
+  justify-content: center;
   width: 12.7%;
-  margin: 0 auto 1rem auto;
-  top: 37%;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 .main__search-button {
   color: white;
@@ -114,6 +116,10 @@
 }
 .main__search-label:hover {
   color: #0085B2;
+}
+.main__search-label_selected {
+  color: #0085B2;
+  font-weight: 700;
 }
 .main__search-price-inputs {
   display: flex;
@@ -160,9 +166,7 @@
   width: 10.5rem;
   text-decoration: none;
   display: flex;
-  position: relative;
-  top: 41%;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   background-color: #0085B2;
   padding: 0.5rem 1rem;
   border-radius: 15px;
@@ -178,6 +182,8 @@
 }
 .main__ad {
   display: flex;
+  justify-content: center;
+  text-align: center;
   flex-direction: row;
   margin-top: 2rem;
   background-color: #aebfc7;
@@ -190,10 +196,10 @@
 .main__ad-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .main__ad-title {
-  margin-left: 2rem;
-  margin-top: 2rem;
+  text-align: center;
 }
 .main__ad-subtext {
   margin-left: 2rem;
@@ -205,6 +211,50 @@
   z-index: 4;
   height: 348px;
   width: 358px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main__search-inputs {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .main__ad {
+    font-size: 24px;
+  }
+  .main__ad-subtext {
+    display: none;
+  }
+  .main__search-inputs {
+    font-size: 10px;
+  }
+  .main__search-label {
+    flex-wrap: wrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10%;
+  }
+  .main__search-input-left {
+    padding-left: 0;
+  }
+  .main__search-labels {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .main__search-label {
+    padding-left: 0.125rem;
+    padding-right: 0;
+  }
+  .main__search-address {
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=MainPage.css.map */
